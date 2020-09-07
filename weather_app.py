@@ -32,7 +32,6 @@ def what_weather(city):
         if response.status_code == 200:
             s = fix_emoji_bug(response.text.strip())
             result = s.split("🌬️")
-            # return response.text.strip()
             return result
         else:
             return '<ошибка на сервере погоды>'
